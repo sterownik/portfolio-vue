@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>My Projects</h2>
-    <div class="col-lg-9   col-10 box mx-auto">
+    <div class="col-lg-9   col-11 box mx-auto">
       <div
         :style="{
           backgroundImage:
@@ -105,30 +105,7 @@ export default {
 };
 </script>
 <style lang="sass" scoped>
-@keyframes shake
 
-  0%
-    transform: translate(0.3px, 0.3px) rotate(0deg)
-  10%
-    transform: translate(-0.3px, -0.7px) rotate(-0.5deg)
-  20%
-    transform: translate(-1.3px, 0px) rotate(0.5deg)
-  30%
-    transform: translate(1.3px, 0.7px) rotate(0deg)
-  40%
-    transform: translate(0.3px, -0.3px) rotate(0.5deg)
-  50%
-    transform: translate(-0.3px, 0.7px) rotate(-0.5deg)
-  60%
-    transform: translate(-1.3px, 0.3px) rotate(0deg)
-  70%
-    transform: translate(1.3px, 0.3px) rotate(-0.5deg)
-  80%
-    transform: translate(-0.3px, -0.3px) rotate(0.5deg)
-  90%
-    transform: translate(0.3px, 0.7px) rotate(0deg)
-  100%
-    transform: translate(0.3px, 0.3px) rotate(-0.5deg)
 
 h2
     text-align: center
@@ -146,26 +123,20 @@ div div.box
     .project-style
         flex-basis: 30%
         height: 300px
-        margin-top: 3vh
+        margin-top: 16vh
         background-position: center
         background-repeat: no-repeat
         background-size: cover
         position: relative
-        animation: shake 2s infinite
-        animation-timing-function: linear
         border-radius: 30px
         box-shadow:         3px 3px 5px 6px black
         z-index: 2
         cursor: pointer
 
 
-        &:hover
-          animation: shake 0.3s infinite
-          h1
-            color: black
         .languages
           position: absolute
-          right: 8%
+          left: 8%
           bottom: 5%
           color: white
         img
@@ -218,7 +189,7 @@ div div.box
             transition: 0.5s
             z-index: -1
             width: 100%
-            background-color: #fcbf49
+            background-color: #ddd
             border-top-right-radius: 30px
             border-bottom-right-radius: 30px
             opacity: 0.5
@@ -227,8 +198,8 @@ div div.box
             position: absolute
         h1
           position: relative
-          top: 15%
-          color: #ddd
+          top: -6vh
+          color: black
           transition: 0.5s
           left: 50%
           text-align: center
@@ -242,10 +213,12 @@ div div.box
 @media (max-width: 767px)
   div div.box
     .project-style
-        height: 150px
+        margin-top: 12vh
+        height: 220px
         flex-basis: 45%
         h1
           font-size: 18px
+          top: -4vh
         .languages
           font-size: 12px
 </style>

@@ -8,12 +8,14 @@
 
 <script>
 import AboutMe from "./components/AboutMe.vue";
+import Skills from "./components/Skills.vue";
 import MyProfile from "./components/MyProfile.vue";
 import Projects from "./components/Projects.vue";
 import Navigation from "./components/Navigation.vue";
 export default {
   components: {
     AboutMe,
+    Skills,
     Navigation,
     Projects,
     MyProfile,
@@ -39,7 +41,7 @@ export default {
   },
   data() {
     return {
-      componentsTab: ["AboutMe", "Projects", "MyProfile"],
+      componentsTab: ["AboutMe", "Projects", "MyProfile", "Skills"],
       whichComponent: 0,
     };
   },
@@ -73,7 +75,7 @@ body
     background-size: 400% 400%
     min-height:  100vh
     margin: 0
-    padding: 30px 0 0 0
+    padding: 30px 0 30px 0
     animation: gradient 10s ease infinite
 @keyframes gradient
     0%

@@ -1,11 +1,11 @@
 <template>
   <div>
     <div class="up">
-      <span>{{ toUp }}</span>
+      <span>{{ getUp }}</span>
       <img @click="changeComponent('up')" src="../assets/up-arrow.png" alt="" />
     </div>
     <div class="down">
-      <span>{{ toDown }}</span>
+      <span>{{ getDown }}</span>
       <img
         @click="changeComponent('down')"
         src="../assets/down-arrow.png"
@@ -18,6 +18,30 @@
 export default {
   inject: ["changeTabs"],
   props: ["toUp", "toDown"],
+  computed: {
+    getUp() {
+      let str;
+      if (this.toUp === "AboutMe") {
+        str = "About Me";
+      } else if (this.toUp === "MyProfile") {
+        str = "My Profile";
+      } else {
+        str = this.toUp;
+      }
+      return str;
+    },
+    getDown() {
+      let str;
+      if (this.toDown === "AboutMe") {
+        str = "About Me";
+      } else if (this.toDown === "MyProfile") {
+        str = "My Profile";
+      } else {
+        str = this.toDown;
+      }
+      return str;
+    },
+  },
   methods: {
     changeComponent(direction) {
       this.changeTabs(direction);
@@ -69,7 +93,7 @@ div
 @media (max-width: 767px)
   div
     div
-        right: 10px
+        right: 1px
         img
             width: 35px
         span
